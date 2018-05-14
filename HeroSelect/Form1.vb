@@ -61,7 +61,7 @@ Public Class Form1
             buttons = New Button()
             buttons.Size = New Drawing.Size(90, 155)
             Dim fileLocation As String
-            fileLocation = "F:\Programming Projects\HeroSelect\HeroImgs\" & heroList(i) & ".png"
+            fileLocation = IO.Path.Combine(My.Application.Info.DirectoryPath, "HeroImgs\" & heroList(i) & ".png")
             buttons.Image = Image.FromFile(fileLocation)
             Dim xSpacer = 95
             If i < 9 Then
